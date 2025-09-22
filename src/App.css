@@ -1,0 +1,431 @@
+/* ---- Global Styles ---- */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ---- Navbar (Updated: white hover effect) ---- */
+.custom-navbar {
+  background: rgba(0,0,0,0.9);
+  padding: 0.8rem 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f0f0f0;
+  margin-right: 1rem;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #f0f0f0;
+  transform: translateY(-2px);
+  transition: color 0.2s, transform 0.2s;
+}
+
+/* ---- Movie Cards ---- */
+.movie-card {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.movie-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.movie-card-title {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+
+.movie-card-subtitle {
+  font-size: 0.95rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.movie-card-description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: #000;
+  margin-top: 0.5rem;
+  word-wrap: break-word;
+  flex-shrink: 0;
+}
+
+.movie-card-btn {
+  margin-top: 1rem;
+  background: #ffcc00;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.movie-card-btn:hover {
+  background: #e6b800;
+  color: #000;
+}
+
+.movie-view-card .badge {
+  color: #000 !important;
+}
+
+/* ---- Movies Grid ---- */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+/* ---- Page Titles ---- */
+h1, .page-title {
+  color: #ffffff !important;
+}
+
+/* ---- Admin Dashboard Title ---- */
+.admin-dashboard h1 {
+  color: #ffffff !important;
+}
+
+/* ---- Buttons ---- */
+.btn-success {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #e6b800;
+  color: #000;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+  color: #fff;
+}
+
+/* ---- Forms ---- */
+.form-control,
+.form-label,
+.form-control::placeholder {
+  color: #ffffff !important;
+}
+
+.form-control::placeholder {
+  opacity: 0.7;
+}
+
+.form-control {
+  background-color: #2c2c2c !important;
+  border: 1px solid #555 !important;
+}
+
+.form-control:focus {
+  border: 1px solid #ffcc00 !important;
+  box-shadow: none !important;
+}
+
+/* ---- Spinner ---- */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.spinner-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.4rem;
+  border-top-color: #3498db;
+  border-right-color: #3498db;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* ---- Comment Cards ---- */
+.card {
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 0.8rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-text {
+  color: #000;
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+}
+
+.card small.text-muted {
+  color: #555;
+}
+
+.card small.text-muted:first-child {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ---- Comments Section ---- */
+.comments-title {
+  color: #000; /* "Comments" title black */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.comment-input {
+  background-color: #ffffff; /* white input background */
+  color: #000 !important;    /* input text black */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  transition: border 0.2s;
+}
+
+.comment-input::placeholder {
+  color: #000; /* placeholder black */
+  opacity: 0.6;
+}
+
+.comment-input:focus {
+  border-color: #007bff;
+  box-shadow: none;
+  outline: none;
+  color: #000 !important;
+}
+
+/* ---- MovieView Left Side ---- */
+.movie-view-card {
+  background-color: #f9f9f9;
+  color: #000;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  padding: 1rem;
+}
+
+.movie-view-card .movie-img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 1rem;
+}
+
+.movie-view-card .movie-title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-view-card .movie-genre-year {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.movie-view-card .movie-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.movie-view-card .movie-director {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ---- Responsive Text & Layout ---- */
+@media (max-width: 768px) {
+  .movie-card-title {
+    font-size: 1.1rem;
+  }
+  .movie-card-subtitle {
+    font-size: 0.85rem;
+  }
+  .movie-card-description {
+    font-size: 0.85rem;
+  }
+  .custom-navbar {
+    padding: 0.6rem 0.8rem;
+  }
+  .movie-view-card .movie-title {
+    font-size: 1.3rem;
+  }
+  .movie-view-card .movie-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---- Register & Login Page Card (Unified Style) ---- */
+/* ---- Register Page ---- */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+.register-card {
+  width: 400px;
+  background-color: #ffffff; /* white card */
+  color: #000000; /* black text */
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* ---- Titles ---- */
+.register-card h1,
+.register-card h2 {
+  text-align: center;
+  color: #000000 !important; /* black title */
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* ---- Form Labels ---- */
+.register-card .form-label {
+  color: #000000 !important; /* black labels */
+  font-weight: 500;
+}
+
+/* ---- Input Fields ---- */
+.register-card .form-control {
+  background-color: #ffffff !important; /* white input background */
+  color: #000000 !important; /* black input text */
+  border: 1px solid #555 !important;
+}
+
+.register-card .form-control::placeholder {
+  color: #000000 !important; /* black placeholder */
+  opacity: 1 !important;
+}
+
+.register-card .form-control:focus {
+  border-color: #007bff !important;
+  box-shadow: none !important;
+}
+
+/* ---- Submit Button ---- */
+.register-card .btn-success {
+  background-color: #000000; /* black button */
+  border: none;
+  color: #ffffff; /* white text */
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.register-card .btn-success:hover {
+  background-color: #333333; /* slightly lighter black on hover */
+  transform: translateY(-2px);
+}
+
+/* ---- Login Page ---- */
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ---- Input Fields ---- */
+.login-page .login-input {
+  background-color: #ffffff !important; /* white input */
+  color: #000000 !important;            /* black text */
+  border: 1px solid #555 !important;
+}
+
+.login-page .login-input::placeholder {
+  color: #000000 !important;           /* black placeholder */
+  opacity: 1;
+}
+
+.login-page .login-input:focus {
+  border-color: #007bff !important;
+  box-shadow: none !important;
+  color: #000000 !important;
+}
+
+/* ---- Button ---- */
+.login-page .btn-primary {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.login-page .btn-primary:hover {
+  background-color: #333333;
+}
