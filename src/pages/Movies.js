@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import UserContext from "../UserContext";
 import AdminView from "../components/AdminView";
 import UserView from "../components/UserView";
