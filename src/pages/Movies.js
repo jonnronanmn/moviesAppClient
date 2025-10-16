@@ -14,7 +14,7 @@ export default function Movies() {
   const fetchData = async () => {
     try {
       const res = await fetch(`${API_BASE}/movies/getMovies`, {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       const data = await res.json();
       setMoviesData(Array.isArray(data.movies) ? data.movies : []);
@@ -25,14 +25,18 @@ export default function Movies() {
     }
   };
 
-  useEffect(() => { fetchData(); }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   if (loading) return <Spinner animation="border" variant="primary" />;
 
   // ✅ Check if user exists before rendering
   if (!user) return <Spinner animation="border" variant="primary" />;
 
-  return user.isAdmin
-    ? <AdminView moviesData={moviesData} fetchData={fetchData} />
-    : <UserView moviesData={moviesData} />;
+  return user.isAdmin ? (
+    <AdminView moviesData={moviesData} fetchData={fetchData} />
+  ) : (
+    <UserView moviesData={moviesData} />
+  );
 }
